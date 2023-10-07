@@ -1,7 +1,7 @@
 const mongoose=require("mongoose");
 
-mongoose.connect('mongodb://127.0.0.1:27017/task-manager-api').then((client)=>{
-    console.log("Connected sucessfully")
+mongoose.connect(process.env.MONGODB_URL).then((client)=>{
+    
 }).catch((error)=>{
     console.log("Unable to connect to DB")
 })
